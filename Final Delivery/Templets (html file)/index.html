@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <style>
+               body {
+                    background-image: url(./liver\ background.jpg);
+                    background-repeat: no-repeat;
+                    background-size: 100% 150%;
+                    background-position: center;
+                    background-size: cover;
+               }
+          </style>
+     </head>
+     <body background="{{url_for('static', filename='liver disease image.jpg')}}">
+          <div class="login" alig="center">
+               <h1>Liver Disease Prediction</h1>
+               <form action="{{ url_for('predict')}}"method="post">
+                    <input type="text" name="Age" placeholder="Age" required="required"/><br><br><br>
+                    <input type="text" name="Gender" placeholder="Gender" required="required"/><br><br><br>
+                    <input type="text" name="Total_Bilirubin" placeholder="Total_Bilirubin" required="required"/><br><br><br>
+                    <input type="text" name="Direct_Bilirubin" placeholder="Direct_Bilirubin" required="required"/><br><br><br>
+                    <input type="text" name="Alkalin_Phosphotase" placeholder="Alkalin_Phosphotase" required="required"/><br><br><br>
+                    <input type="text" name="Alamine_Aminotransferase" placeholder="Alamine_Aminotransferase" required="required"/><br><br><br>
+                    <input type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate_Aminotransferase" required="required"/><br><br><br>
+                    <input type="text" name="Total_Protiens" placeholder="Total_Protiens" required="required"/><br><br><br>
+                    <input type="text" name="Albumin" placeholder="Albumin" required="required"/><br><br><br>
+                    <input type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin_and_Globulin_Ratio" required="required"/><br><br><br>
+                    <button type="submit" class="btn btn-primary btn-block btn-large">PREDICT</button>
+               </form>
+               <br>
+               <br>
+                <b><fontstyle="<font-family:verdana" size="5"><Prediction_text></fontstyle></b>     
+               <br>
+                <b><fontstyle="<font-family:verdana" size="5"><Prediction_text1></fontstyle></b>
+               <br>     
+               <b><fontstyle="<font-family:verdana" size="5">{{ Prediction_text2}}</fontstyle></b>  
+               <br>
+               <b><fontstyle="<font-family:verdana" size="5">{{ Prediction_text3}}</fontstyle></b>   
+               <br>
+               <b><fontstyle="<font-family:verdana" size="5">{{ Prediction_text4}}</fontstyle></b>  
+               <br>
+               <b><fontstyle="<font-family:verdana" size="5">{{ Prediction_text5}}</fontstyle></b>     
+               <br>
+               <b><fontstyle="<font-family:verdana" size="5">{{ Prediction_text6}}</fontstyle></b>  
+               </div>
+          </body>
+     </html>
